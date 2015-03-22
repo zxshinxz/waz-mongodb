@@ -1,9 +1,5 @@
 #!/bin/bash
 
-echo Specialized MongoDB on Microsoft Azure configuration script
-echo by Jeff Wilcox and contributors
-echo
-
 pushd /tmp > /dev/null
 
 ### PREREQ SOFTWARE
