@@ -4,11 +4,7 @@ echo Specialized MongoDB on Microsoft Azure configuration script
 echo by Jeff Wilcox and contributors
 echo
 
-
-
 pushd /tmp > /dev/null
-
-
 
 ### PREREQ SOFTWARE
 
@@ -31,8 +27,6 @@ npm install azure@0.10.4  > /tmp/nodeInstall.log 2>&1
 echo Installing Azure storage utility...
 wget --no-check-certificate https://raw.github.com/jeffwilcox/waz-updown/master/updown.js > /tmp/updownInstall.log 2>&1
 
-
-
 ### MONGODB
 
 echo Adding MongoDB repos to the system...
@@ -46,7 +40,6 @@ YUM10GEN
  
 sudo mv mongodb.repo /etc/yum.repos.d/
 sudo yum install -y mongodb-org > /tmp/installingMongo.log
-
 
 ### AZURE STORAGE CONFIG
 
@@ -97,8 +90,6 @@ function ask {
     done
 }
 
-
-
 ### VARIABLES
 
 isPrimary=true
@@ -109,8 +100,6 @@ mongoDataPath=/var/lib/mongo
 
 primaryPasscode=
 primaryHostname=$(hostname)
-
-
 
 ### CONFIGURATION
 
