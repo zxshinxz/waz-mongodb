@@ -65,18 +65,18 @@ pushd /tmp > /dev/null
 echo Installing Node.js...
 wget --no-check-certificate https://raw.github.com/isaacs/nave/master/nave.sh > /tmp/naveNode.log 2>&1
 chmod +x nave.sh
-sudo ./nave.sh usemain 0.10.26  > /tmp/naveNodeUseMain.log 2>&1
+sudo ./nave.sh usemain 0.12.0  > /tmp/naveNodeUseMain.log 2>&1
 # ./nave.sh install 0.10.26
 # ./nave.sh use 0.10.26
 
 nodeInstalled=$(node -v)
-if [ "$nodeInstalled" != "v0.10.26" ]; then
+if [ "$nodeInstalled" != "v0.12.0" ]; then
         echo Node.js could not be installed.
         exit 1
 fi
 
 echo Installing Azure Node.js module...
-npm install azure@0.8.1  > /tmp/nodeInstall.log 2>&1
+npm install azure@0.10.4  > /tmp/nodeInstall.log 2>&1
 
 echo Installing Azure storage utility...
 wget --no-check-certificate https://raw.github.com/jeffwilcox/waz-updown/master/updown.js > /tmp/updownInstall.log 2>&1
